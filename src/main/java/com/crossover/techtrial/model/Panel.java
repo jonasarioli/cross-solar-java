@@ -10,6 +10,8 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import org.springframework.lang.Nullable;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * Panel class hold information related to a Solar panel.
  * 
@@ -22,6 +24,7 @@ public class Panel implements Serializable {
 
   private static final long serialVersionUID = -8527695980909864257L;
 
+  @JsonIgnore
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   Long id;
